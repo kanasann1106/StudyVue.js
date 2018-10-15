@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Vue.js study</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app-3">
+	<span v-if="seen">Now you see me</span>
+</div>
+<script>
+	const app3 = new Vue({
+		el :'#app-3',
+		data: {
+			seen:true
+		}
+	})
+</script>
+
+<div id = "app-4">
+	<ol>
+		<li v-for="todo in todos">
+			{{todo.text}}
+		</li>
+	</ol>
+</div>
+
+
+<div id="app-6">
+	<p>{{message}}</p>
+	<input v-model="message">
+</div>
+
+<div id="answer_option">
+  <ul>
+    <li class="answer_item" v-for="list in lists">
+     <a href="#next_btn">{{list.a}}</a>
+    </li>
+  </ul>
+</div>
+
+<script type="text/javascript" src="sample.js"></script>
+</body>
+</html>

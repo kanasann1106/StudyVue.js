@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Happy_Vue.js</title>
+
+</head>
+<body>
+	<div id="app">
+		<h1>{{message}}</h1>
+		<input v-model="message">
+	</div>
+	<ol id="fruit">
+		<li v-for="item in list">{{item}}</li>
+	</ol>
+	<div id="click">
+		<button v-on:click="handleClick">Click!</button>
+	</div>
+	<div id="show">
+		<p v-if="show">にゃんこ。</p>
+	</div>
+
+	<div id="app2">
+		<button v-on:click="show=!show">切り替え</button>
+		<transition>
+			<p v-if="show">さくらだよ♪</p>
+		</transition>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

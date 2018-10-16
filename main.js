@@ -1,18 +1,24 @@
-const app = new Vue({
+let state ={count: 0}
+const APP = new Vue({
 	el: '#app',
 	data: {
-		message: 'Happy!!Vue!!'
+		message: {
+			value: 'Happy!!Vue!!'
+		},
+		list: ['sakura','himawari','momiji'],
+		num: 2
 	}
 })
+state.count++
 
-const fruit = new Vue({
+const FRUIT = new Vue({
 	el: '#fruit',
 	data: {
 		list: ['リンゴ','ミカン','ブドウ']
 	}
 })
 
-const click = new Vue({
+const CLICK = new Vue({
 	el: '#click',
 	methods: {
 		handleClick: function(event){
@@ -21,16 +27,44 @@ const click = new Vue({
 	}
 })
 
-const show = new Vue({
+const SHOW = new Vue({
 	el: '#show',
 	data: {
 		show: true
 	}
 })
 
-const app2 = new Vue({
+const APP2 = new Vue({
 	el: '#app2',
 	data: {
-		show:true
+		show: true,
+		message: 'ピアノの音色癒しや〜',
+		scroll: 0
+	},
+	mounted: function(){
+		this.scroll = 100
 	}
 })
+
+const COUNT_UP = new Vue({
+	el: '#count-up',
+	data:{
+		count: 0
+	},
+	methods: {
+		increment: function(){
+			let vm = this
+			setTimeout(function() {vm.count++}, 5)
+		}
+	}
+})
+
+
+
+
+
+
+
+
+
+

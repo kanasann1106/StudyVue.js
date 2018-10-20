@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Happy_Vue.js</title>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="item in list"
+				v-bind:key="item.id"
+				v-bind:class="{tuyoi: item.hp > 300}">
+				ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+				<span v-if="item.hp > 300">強い！</span>
+			</li>
+		</ul>
+	</div>
+	<div id="app2">
+		名前<input v-model="name">
+		<button v-on:click="doAdd">モンスター追加</button>
+		<ul>
+			<li v-for="item in list" v-bind:key="item.id">
+				ID.{{item.id}} {{item.name}} HP.{{item.hp}}
+			</li>
+		</ul>
+	</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="study2.js"></script>
+</body>
+</html>

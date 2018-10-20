@@ -59,6 +59,13 @@ const COUNT_UP = new Vue({
 	}
 })
 
+// const APP3 = new Vue({
+// 	el: '#app3',
+// 	data: {
+// 		radius: 50
+// 	}
+// })
+
 
 
 

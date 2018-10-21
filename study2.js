@@ -30,6 +30,31 @@ const APP2 = new Vue({
 				hp: 500
 			})
 			
+		},
+		doRemove: function(index){
+			this.list.splice(index,1)
+		},
+		doAttack: function(index){
+			this.list[index].hp -= 10
 		}
 	}
 })
+
+const APP3 = new Vue({
+	el: '#app3',
+	data: {
+		list: []
+	},
+	created: function(){
+		axios.get('quizdata.json').then(function(response){
+			this.list = response.data
+		}.bind(this)).catch(function(e){
+			console.log(e)
+		})
+	}
+})
+
+
+
+
+

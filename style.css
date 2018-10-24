@@ -4,3 +4,11 @@
 .v-enter, .v-leave-to{
 	opacity: 0;
 }
+img{
+	width: 300px;
+	opacity: 1;
+	transition: opacity 1s;
+}
+img.hide{
+	opacity: 0;
+}

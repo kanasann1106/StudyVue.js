@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>Hello Vue</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="app" class="container">
+		<h1>
+			My Memo
+			<span class="info">({{ remaining.length }}/{{ memos.length }})</span>
+			<button v-on:click="purge">一括削除</button>
+		</h1>
+		<ul v-if="memos.length">
+			<li v-for="(memo,index) in memos">
+				<input type="checkbox" v-model="memo.isDone">
+				<span v-bind:class="{done: memo.isDone}">{{ memo.title }}</span>
+				<span v-on:click="deleteItem(index)" class="command">[削除]</span>
+			</li>
+		</ul>
+		<ul v-else>
+			<li>メモはありません</li>
+		</ul>
+		<form v-on:submit.prevent="addItem">
+			<input type="text" v-model="newItem">
+			<input type="submit" value="Add">
+		</form>
+	</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

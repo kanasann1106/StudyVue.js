@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>component</title>
+</head>
+<body>
+
+
+<div id="app">
+	<ul>
+		<comp-child v-for="item in list"
+			v-bind:key="item.id"
+			v-bind:name="item.name"
+			v-bind:hp="item.hp"
+			v-on:childs-event="parentsMethod"></comp-child>
+	</ul>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+<script type="text/javascript" src="js/study4.js"></script>
+</body>
+</html>

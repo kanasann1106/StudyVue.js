@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vueサンプル</title>
+</head>
+<body>
+<main>
+	<section id="app">
+		<h1>{{ message }}</h1>
+
+		<ul v-for='category in categorys'>
+			<li>
+				{{ category.name }}
+				<ul>
+					<li v-for="animal in category.animals">{{ animal }}</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
+	<section id="sample2">
+		<h1>{{ message }}</h1>
+		<button @click="imgShow">表示/非表示</button>
+		<img v-if="show" src="neko.jpg">
+	</section>
+
+	<section id="sample3">
+		<h1>{{ message }}</h1>
+		<p>{{ count }}</p>
+		<button @click="countUp">カウントUP</button>
+	</section>
+</main>
+	
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="sample.js"></script>
+</body>
+</html>

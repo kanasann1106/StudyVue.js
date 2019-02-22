@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>computed</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="app">
+	<div class="container">
+
+		<label for="birthday">お誕生日は？</label>
+		<input type="date" id="birthday" v-model="birthday">
+		
+		<p v-if="age >= 0">{{ age }} 歳ですね！</p>
+		<p v-else>お誕生日を入力してください。</p>
+
+		<p v-if="isComputedCalled" class="message">
+			Computedが呼び出されました。
+		</p>
+
+	</div>
+
+	<div class="container">
+
+		<p>
+			<input type="number" v-model.number="left">
+			+
+			<input type="number" v-model.number="right">
+			=
+			{{ total }}
+		</p>
+
+		<p v-if="isComputedCalled" class="message">
+			Computedが呼び出されました。
+		</p>
+
+	</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

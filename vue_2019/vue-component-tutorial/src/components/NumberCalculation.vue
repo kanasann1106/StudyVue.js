@@ -29,7 +29,7 @@
 			start(){
 				this.createQuestion()
 				this.num = 0
-				this.questionsNum = 1
+				this.questionsNum = 5
 			},
 			createQuestion(){
 				this.leftnum = Math.floor(Math.random() * (100 - 1) + 1)

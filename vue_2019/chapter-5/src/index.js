@@ -1,7 +1,10 @@
 import Vue from 'vue'
+// import './app.scss'
+import MarkdownPanel from './components/MarkdownPanel.vue'
 
-new Vue({
-  el: '#app',
-  components: {
-  }
+const app = new Vue({
+	el: '#app',
+	components: {
+		MarkdownPanel
+	}
 })
